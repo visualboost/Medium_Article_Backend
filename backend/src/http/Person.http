@@ -1,0 +1,71 @@
+### Get a Person by _id
+
+GET http://localhost:50000/person/{{person__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
+### Get all People
+
+GET http://localhost:50000/persons
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
+### Creates a new Person
+
+POST http://localhost:50000/person
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "firstname": "String",
+  "lastname": "String",
+  "birthdate": 1672531200,
+  "gender": "MALE",
+  "address": {
+    "streetname": "String",
+    "housenumber": 10,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    }
+  }
+}
+
+### Update an existing Person
+
+PUT http://localhost:50000/person/{{person__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "firstname": "String",
+  "lastname": "String",
+  "birthdate": 1672531200,
+  "gender": "MALE",
+  "address": {
+    "streetname": "String",
+    "housenumber": 10,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    }
+  }
+}
+
+### Delete an existing Person
+
+DELETE http://localhost:50000/person/{{person__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
